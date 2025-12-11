@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L. Smith Johnson - Certified Translator, Data Analyst & Virtual Assistant">
+    <meta name="keywords" content="translator, data analyst, virtual assistant, freelance, translation services">
+    <meta name="author" content="L. Smith Johnson">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lsmithjohnson.com/">
+    <meta property="og:title" content="L. Smith Johnson - Translator & Data Analyst">
+    <meta property="og:description" content="Professional translation, data analysis and virtual assistant services">
+    <meta property="og:image" content="https://lsmithjohnson.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lsmithjohnson.com/">
+    <meta property="twitter:title" content="L. Smith Johnson - Translator & Data Analyst">
+    <meta property="twitter:description" content="Professional translation, data analysis and virtual assistant services">
+    <meta property="twitter:image" content="https://lsmithjohnson.com/images/og-image.jpg">
+    
+    <title>L. Smith Johnson | Certified Translator, Data Analyst & Virtual Assistant</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --primary-light: #3b82f6;
+            --secondary: #0f766e;
+            --secondary-light: #5eead4;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+            --success: #10b981;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 12px;
+            --container-width: 1200px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+            color: var(--gray);
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            gap: 10px;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            z-index: -1;
+            transition: var(--transition);
+            opacity: 0;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn:hover::before {
+            opacity: 1;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--dark);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--dark);
+            cursor: pointer;
+            padding: 5px;
+            z-index: 1001;
+        }
+        
+        /* ============ CRITICAL IMAGE FIXES FOR GITHUB ============ */
+        
+        /* 1. BASE IMAGE STYLES - 100% RESPONSIVE */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 2. HERO IMAGE FIX - Mobile & Desktop */
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            border: 8px solid var(--white);
+            margin: 0 auto;
+            object-fit: cover;
+        }
+        
+        /* 3. PORTFOLIO IMAGE FIX */
+        .portfolio-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+        
+        /* 4. ABOUT IMAGE FIX */
+        .about-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            border: 8px solid var(--white);
+            margin: 0 auto;
+            object-fit: cover;
+        }
+        
+        /* 5. PROJECT IMAGE FIX */
+        .project-image img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 8px solid rgba(255, 255, 255, 0.1);
+            margin: 0 auto;
+            object-fit: cover;
+        }
+        
+        /* 6. CLIENT AVATAR FIX */
+        .client-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* 7. MOBILE SPECIFIC FIXES */
+        @media (max-width: 768px) {
+            .hero-image img,
+            .about-image img,
+            .project-image img {
+                max-width: 350px;
+            }
+            
+            .portfolio-img {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-image img,
+            .about-image img,
+            .project-image img {
+                max-width: 100%;
+                border-width: 4px;
+            }
+            
+            .portfolio-img {
+                height: 180px;
+            }
+        }
+        
+        /* ============ END OF IMAGE FIXES ============ */
+        
+        /* Hero Section - FIXED */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 120px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            max-width: 650px;
+        }
+        
+        .hero-text h1 {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .hero-text .highlight {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-text .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: rgba(37, 99, 235, 0.15);
+            z-index: -1;
+            border-radius: 4px;
+        }
+        
+        .hero-text > p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: var(--gray);
+            max-width: 600px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+            max-width: 800px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--light);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(37, 99, 235, 0.05));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .service-icon i {
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+            min-height: 60px;
+        }
+        
+        .service-card p {
+            flex-grow: 1;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .portfolio-item {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .portfolio-content {
+            padding: 2rem;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .skills-list {
+            margin: 2.5rem 0;
+        }
+        
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background: var(--gray-light);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
+            border-radius: 5px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Project Section */
+        .project-section {
+            background: linear-gradient(135deg, var(--secondary) 0%, #115e59 100%);
+            color: var(--white);
+        }
+        
+        .project-section h2 {
+            color: var(--white);
+        }
+        
+        .project-section h2::after {
+            background: var(--secondary-light);
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #1e3a8a 0%, var(--primary-dark) 100%);
+            color: var(--white);
+        }
+        
+        .testimonials h2 {
+            color: var(--white);
+        }
+        
+        .testimonials h2::after {
+            background: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--white);
+            flex-shrink: 0;
+        }
+        
+        .client-details {
+            flex-grow: 1;
+        }
+        
+        .client-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .client-position {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        .rating {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Contact Section */
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--white);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .footer-links h3 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            margin-left: 1rem;
+        }
+        
+        .lang-btn {
+            background: var(--light);
+            border: 2px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            padding: 8px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .lang-btn:hover {
+            border-color: var(--primary);
+        }
+        
+        .lang-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            min-width: 200px;
+            padding: 0.5rem;
+            display: none;
+            z-index: 1000;
+        }
+        
+        .lang-dropdown.show {
+            display: block;
+        }
+        
+        .lang-option {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .lang-option:hover {
+            background: var(--light);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .about-content,
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-image,
+            .about-image,
+            .project-image {
+                order: -1;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 600px;
+                margin: 3rem auto 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transform: translateX(-100%);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            
+            .nav-links a {
+                font-size: 1.4rem;
+            }
+            
+            .hero {
+                padding-top: 140px;
+                padding-bottom: 80px;
+            }
+            
+            .hero-text > p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 400px;
+            }
+            
+            .services-grid,
+            .portfolio-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .service-card,
+            .testimonial-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+        }
+        
+        /* Performance Optimizations */
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy.loaded {
+            opacity: 1;
+        }
+        
+        /* Loading Spinner */
+        .loading-spinner {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid var(--gray-light);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        :focus {
+            outline: 3px solid var(--primary);
+            outline-offset: 3px;
+        }
+        
+        /* Print Styles */
+        @media print {
+            .no-print {
+                display: none;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .hero, section {
+                padding: 20pt 0;
+            }
+            
+            .btn, .social-icons, .mobile-toggle {
+                display: none;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "L. Smith Johnson",
+        "jobTitle": "Certified Translator, Data Analyst & Virtual Assistant",
+        "description": "Professional translation, data analysis and virtual assistant services with 2+ years of experience",
+        "url": "https://lsmithjohnson.com",
+        "email": "johnsonlerone6@gmail.com",
+        "telephone": "+50940047490",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Port-au-Prince",
+            "addressCountry": "HT"
+        },
+        "knowsLanguage": ["en", "fr", "es", "ht"],
+        "offers": {
+            "@type": "Service",
+            "serviceType": "Translation, Data Analysis, Virtual Assistance",
+            "areaServed": "Worldwide"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="logo">
+                    <i class="fas fa-user-tie"></i>
+                    <span>JLS</span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">My Project</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Certified Translator, <span class="highlight">Data Analyst</span> & Virtual Assistant</h1>
+                    <p>Expert in multilingual translation (FR/EN/ES), data analysis, and virtual assistance with 2+ years of experience. I transform your needs into precise and efficient solutions.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                            Request a Quote
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline">
+                            <i class="fas fa-briefcase"></i>
+                            View Portfolio
+                        </a>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <!-- =========== IMAGE 1: PROFILE PHOTO =========== -->
+                    <!-- REMPLACEZ PAR: profile.jpg (800x800px) -->
+                    <img src="profile.jpg" 
+                         alt="L. Smith Johnson - Professional Profile Photo"
+                         loading="lazy"
+                         class="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>My Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Professional Translation</h3>
+                    <p>Accurate FR/EN/ES translation for technical, commercial, and marketing documents with quality guarantee and deadline respect.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>In-depth analysis, data visualization, advanced Excel reports, dashboards, and actionable insights for business decisions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Management</h3>
+                    <p>Data entry, organization, and processing with advanced Excel, database creation, and process automation for efficiency.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Virtual Assistance</h3>
+                    <p>Complete administrative support: project management, research, customer service, and social media management.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice-over & Narration</h3>
+                    <p>Professional voice-over in French and English for videos, advertisements, and presentations with included editing.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Research & Market Intelligence</h3>
+                    <p>Comprehensive product research, supplier sourcing, market analysis, and competitive intelligence for strategic decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <!-- =========== IMAGE 2: TRANSLATION PROJECT =========== -->
+                    <!-- REMPLACEZ PAR: translation.png (1080x1080px) -->
+                    <img src="translation.png" 
+                         alt="Translation Project - Technical Documents"
+                         class="portfolio-img lazy"
+                         loading="lazy">
+                    <div class="portfolio-content">
+                        <h3>Technical Document Translation</h3>
+                        <p>Translation of technical documents from English to French for an international technology company, ensuring accuracy and technical terminology consistency.</p>
+                        <p><strong>Client:</strong> Babel Translations</p>
+                        <p><strong>Languages:</strong> EN → FR</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <!-- =========== IMAGE 3: DATA ANALYSIS PROJECT =========== -->
+                    <!-- REMPLACEZ PAR: data.jpg (1920x1080px) -->
+                    <img src="data.jpg" 
+                         alt="Data Analysis Project - Sales Dashboard"
+                         class="portfolio-img lazy"
+                         loading="lazy">
+                    <div class="portfolio-content">
+                        <h3>Sales Data Analysis Dashboard</h3>
+                        <p>Created comprehensive Excel dashboards for sales analysis, trend forecasting, and performance reporting for a retail company.</p>
+                        <p><strong>Client:</strong> Global Data Solutions</p>
+                        <p><strong>Tools:</strong> Excel, Power Query</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <!-- =========== IMAGE 4: VOICE-OVER PROJECT =========== -->
+                    <!-- REMPLACEZ PAR: voice-over.png (820x312px) -->
+                    <img src="voice-over.png" 
+                         alt="Voice-over Project - Educational Videos"
+                         class="portfolio-img lazy"
+                         loading="lazy">
+                    <div class="portfolio-content">
+                        <h3>Educational Video Voice-over</h3>
+                        <p>Professional narration in French for a series of educational videos about digital technologies and online security.</p>
+                        <p><strong>Project:</strong> 10 educational videos</p>
+                        <p><strong>Duration:</strong> 5 minutes each</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>L. Smith Johnson - Multidisciplinary Expert</h3>
+                    <p>I am L. Smith Johnson, a multilingual professional specializing in translation, data analysis, and virtual assistance. Based in Port-au-Prince, Haiti, I combine linguistic and technical expertise to deliver comprehensive, high-quality solutions.</p>
+                    
+                    <p>With academic training in languages and translation from the State University of Haiti and certification in bilingual secretarial studies, I've developed a rigorous methodology that guarantees precision, reliability, and respect for deadlines.</p>
+                    
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Translation FR/EN/ES</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Data Analysis (Excel, SQL)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Project Management</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Voice-over & Audio Production</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2.5rem;">
+                        <h4>Academic Background</h4>
+                        <p><strong>Bachelor in Languages and Translation</strong><br>
+                        State University of Haiti (UEH) | 2015 - Present</p>
+                        
+                        <p><strong>Diploma in Bilingual Secretarial Studies & Office IT</strong><br>
+                        Haitian Vocational Training Center | 2015 - 2020</p>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <!-- =========== IMAGE 5: WORKING PHOTO =========== -->
+                    <!-- REMPLACEZ PAR: working.jpg (800x600px) -->
+                    <!-- Si vous n'avez pas working.jpg, utilisez profile.jpg -->
+                    <img src="profile.jpg" 
+                         alt="L. Smith Johnson working on computer"
+                         loading="lazy"
+                         class="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FactureBot Project Section -->
+    <section class="project-section" id="project">
+        <div class="container">
+            <h2>My Project: FactureBot</h2>
+            
+            <div class="project-content">
+                <div class="project-text">
+                    <h3>Automated Invoice Management Solution</h3>
+                    <p>FactureBot is a web application I developed to simplify invoice creation and management for small businesses and freelancers.</p>
+                    
+                    <p><strong>Key Features:</strong></p>
+                    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; color: white;">
+                        <li>Quick creation of professional invoices</li>
+                        <li>Client and product management</li>
+                        <li>Automatic PDF generation</li>
+                        <li>Payment tracking</li>
+                        <li>Analytical dashboard</li>
+                    </ul>
+                    
+                    <p>This project demonstrates my skills in web development, UX/UI design, and solving real business problems with technology.</p>
+                    
+                    <a href="https://facturebot.github.io/Landing/" target="_blank" class="btn" style="background: var(--secondary-light); color: var(--secondary); margin-top: 1.5rem;">
+                        <i class="fas fa-external-link-alt"></i>
+                        Visit FactureBot
+                    </a>
+                </div>
+                
+                <div class="project-image">
+                    <!-- =========== IMAGE 6: FACTUREBOT SCREENSHOT =========== -->
+                    <!-- REMPLACEZ PAR: facturebot.png (1280x720px) -->
+                    <img src="facturebot.png" 
+                         alt="FactureBot - Invoice Management Application"
+                         loading="lazy"
+                         class="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>Client Testimonials</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "L. Smith Johnson exceeded all my expectations with their professionalism and attention to detail. I would not hesitate to use their services again in the future."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <!-- =========== IMAGE 7: CLIENT 1 =========== -->
+                            <!-- REMPLACEZ PAR: client1.png (400x400px) -->
+                            <img src="client1.png" 
+                                 alt="Client David"
+                                 loading="lazy">
+                        </div>
+                        <div class="client-details">
+                            <div class="client-name">David</div>
+                            <div class="client-position">Regular Client | Translation Project</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Excellent work, clear communication, deadlines respected. I highly recommend L. Smith Johnson for any translation or data management project!"
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <!-- =========== IMAGE 8: CLIENT 2 =========== -->
+                            <!-- REMPLACEZ PAR: client2.png (400x400px) -->
+                            <img src="client2.png" 
+                                 alt="Client Sarah"
+                                 loading="lazy">
+                        </div>
+                        <div class="client-details">
+                            <div class="client-name">Sarah</div>
+                            <div class="client-position">Data Analysis Client</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Professional, reliable, and always delivers quality work. The voice-over project was completed perfectly and ahead of schedule."
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <!-- =========== IMAGE OPTIONNELLE: CLIENT 3 =========== -->
+                            <!-- Si vous n'avez pas client3.png, utilisez client1.png -->
+                            <img src="client1.png" 
+                                 alt="Client Michael"
+                                 loading="lazy">
+                        </div>
+                        <div class="client-details">
+                            <div class="client-name">Michael</div>
+                            <div class="client-position">Voice-over Project Client</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <div style="display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.1); padding: 1rem 2rem; border-radius: 50px; backdrop-filter: blur(10px);">
+                    <div class="rating" style="margin-right: 1.5rem;">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span style="font-weight: 700; font-size: 1.2rem;">Average Rating: 5.0/5 (7 reviews)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            
+            <div class="contact-form">
+                <!-- Formspree Form -->
+                <form action="https://formspree.io/f/xwkgyjvy" method="POST" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Interested In *</label>
+                        <select id="service" name="service" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="translation">Professional Translation</option>
+                            <option value="data-analysis">Data Analysis</option>
+                            <option value="data-management">Data Management</option>
+                            <option value="virtual-assistance">Virtual Assistance</option>
+                            <option value="voiceover">Voice-over & Narration</option>
+                            <option value="research">Research & Market Intelligence</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details *</label>
+                        <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget (USD)</label>
+                        <select id="budget" name="budget" class="form-control">
+                            <option value="">Select a range</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-250">$100 - $250</option>
+                            <option value="250-500">$250 - $500</option>
+                            <option value="500+">$500+</option>
+                            <option value="hourly">To discuss (hourly rate)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="_subject" value="New Project Inquiry - L. Smith Johnson Website">
+                    <input type="hidden" name="_language" value="en">
+                    
+                    <button type="submit" class="btn" style="width: 100%; padding: 1.25rem; font-size: 1.2rem;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Request
+                    </button>
+                </form>
+                
+                <div style="text-align: center; margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--gray-light);">
+                    <p style="color: var(--gray); margin-bottom: 1rem;">
+                        <i class="fas fa-clock" style="margin-right: 10px;"></i>
+                        Guaranteed response within 2 hours (Mon-Fri: 9am-5pm UTC-5)
+                    </p>
+                    
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 1.5rem;">
+                        <a href="mailto:johnsonlerone6@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-envelope"></i>
+                            johnsonlerone6@gmail.com
+                        </a>
+                        
+                        <a href="https://wa.me/50940047490" target="_blank" style="color: var(--success); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp: +509 4004 7490
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#home" class="footer-logo">L.SmithJohnson</a>
+                    <p>Certified translator, data analyst & professional virtual assistant. Delivering high-quality linguistic and technical services worldwide.</p>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/johnson.lerone" target="_blank" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.freelancer.com/u/johnsonlerone6" target="_blank" class="social-icon" aria-label="Freelancer.com">
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~01abcdef" target="_blank" class="social-icon" aria-label="Upwork">
+                            <i class="fas fa-code"></i>
+                        </a>
+                        <a href="https://www.truelancer.com/freelancer/lsmithjohnson" target="_blank" class="social-icon" aria-label="Truelancer">
+                            <i class="fas fa-laptop-code"></i>
+                        </a>
+                        <a href="https://wa.me/50940047490" target="_blank" class="social-icon" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:johnsonlerone6@gmail.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-arrow-right"></i> Professional Translation</a></li>
+                        <li><a href="#services"><i class="fas fa-arrow-right"></i> Data Analysis</a></li>
+                        <li><a href="#services"><i class="fas fa-arrow-right"></i> Data Management</a></li>
+                        <li><a href="#services"><i class="fas fa-arrow-right"></i> Virtual Assistance</a></li>
+                        <li><a href="#services"><i class="fas fa-arrow-right"></i> Voice-over Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about"><i class="fas fa-arrow-right"></i> About Me</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-arrow-right"></i> Portfolio</a></li>
+                        <li><a href="#project"><i class="fas fa-arrow-right"></i> FactureBot Project</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-arrow-right"></i> Testimonials</a></li>
+                        <li><a href="#contact"><i class="fas fa-arrow-right"></i> Request Quote</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 12px;"></i> Port-au-Prince, Haiti</li>
+                        <li><i class="fas fa-clock" style="margin-right: 12px;"></i> Mon-Fri: 9am-5pm (UTC-5)</li>
+                        <li><i class="fas fa-language" style="margin-right: 12px;"></i> EN / FR / ES / Creole</li>
+                        <li><i class="fas fa-bolt" style="margin-right: 12px;"></i> Response Time: &lt; 2 hours</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 L. Smith Johnson. All rights reserved.</p>
+                <p style="margin-top: 10px; font-size: 0.95rem;">Certified Translator, Data Analyst & Virtual Assistant</p>
+                <p style="margin-top: 5px; font-size: 0.9rem; opacity: 0.8;">Email: johnsonlerone6@gmail.com | WhatsApp: +509 4004 7490</p>
+                <p style="margin-top: 5px; font-size: 0.85rem; opacity: 0.6;">
+                    This website is translation-ready. Use Chrome's translate feature for other languages.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Ready
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const mobileToggle = document.getElementById('mobileToggle');
+            const navLinks = document.getElementById('navLinks');
+            const header = document.getElementById('header');
+            
+            // Hide loading spinner
+            setTimeout(() => {
+                loadingSpinner.style.display = 'none';
+            }, 500);
+            
+            // Lazy load images
+            const lazyImages = document.querySelectorAll('img.lazy');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => imageObserver.observe(img));
+            
+            // Mobile navigation toggle
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileToggle.innerHTML = navLinks.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Animate skill bars on scroll
+            const skillBars = document.querySelectorAll('.skill-progress');
+            const observerOptions = {
+                threshold: 0.5
+            };
+            
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBar = entry.target;
+                        const width = skillBar.style.width;
+                        skillBar.style.width = '0%';
+                        
+                        setTimeout(() => {
+                            skillBar.style.width = width;
+                        }, 300);
+                        
+                        skillObserver.unobserve(skillBar);
+                    }
+                });
+            }, observerOptions);
+            
+            skillBars.forEach(bar => skillObserver.observe(bar));
+            
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    // Show loading state
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    
+                    // Let Formspree handle submission
+                    // Form will reset on success automatically
+                    
+                    // Reset button after 10 seconds if something goes wrong
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 10000);
+                });
+            }
+            
+            // Performance monitoring
+            window.addEventListener('load', () => {
+                // Log performance metrics
+                setTimeout(() => {
+                    const timing = performance.timing;
+                    const loadTime = timing.loadEventEnd - timing.navigationStart;
+                    console.log(`Page loaded in ${loadTime}ms`);
+                }, 0);
+                
+                // Check all images loaded successfully
+                const images = document.querySelectorAll('img');
+                images.forEach(img => {
+                    if (img.complete && img.naturalHeight === 0) {
+                        console.error('Image failed to load:', img.src);
+                    }
+                });
+            });
+            
+            // Language detection for translation readiness
+            const userLang = navigator.language || navigator.userLanguage;
+            console.log('User language detected:', userLang);
+            
+            // Add translation hint for browsers
+            const htmlElement = document.documentElement;
+            htmlElement.setAttribute('lang', 'en');
+            htmlElement.setAttribute('translate', 'yes');
+            htmlElement.setAttribute('data-translate', 'yes');
+            
+            // Browser compatibility check
+            const isIE = /*@cc_on!@*/false || !!document.documentMode;
+            if (isIE) {
+                console.warn('Internet Explorer detected - some features may not work optimally');
+            }
+        });
+        
+        // Handle browser back/forward cache
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
+</body>
+</html>
