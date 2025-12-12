@@ -1650,164 +1650,179 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // DOM Ready
-        document.addEventListener('DOMContentLoaded', function() {
-            const loadingSpinner = document.getElementById('loadingSpinner');
-            const mobileToggle = document.getElementById('mobileToggle');
-            const navLinks = document.getElementById('navLinks');
-            const header = document.getElementById('header');
-            
-            // Hide loading spinner
-            setTimeout(() => {
-                loadingSpinner.style.display = 'none';
-            }, 500);
-            
-            // Lazy load images
-            const lazyImages = document.querySelectorAll('img.lazy');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            
-            lazyImages.forEach(img => imageObserver.observe(img));
-            
-            // Mobile navigation toggle
-            mobileToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                mobileToggle.innerHTML = navLinks.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-            });
-            
-            // Close mobile menu on link click
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navLinks.classList.remove('active');
-                    mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                });
-            });
-            
-            // Header scroll effect
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Animate skill bars on scroll
-            const skillBars = document.querySelectorAll('.skill-progress');
-            const observerOptions = {
-                threshold: 0.5
-            };
-            
-            const skillObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const skillBar = entry.target;
-                        const width = skillBar.style.width;
-                        skillBar.style.width = '0%';
-                        
-                        setTimeout(() => {
-                            skillBar.style.width = width;
-                        }, 300);
-                        
-                        skillObserver.unobserve(skillBar);
-                    }
-                });
-            }, observerOptions);
-            
-            skillBars.forEach(bar => skillObserver.observe(bar));
-            
-            // Form submission
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    const submitBtn = this.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    
-                    // Show loading state
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                    submitBtn.disabled = true;
-                    
-                    // Let Formspree handle submission
-                    // Form will reset on success automatically
-                    
-                    // Reset button after 10 seconds if something goes wrong
-                    setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                    }, 10000);
-                });
-            }
-            
-            // Performance monitoring
-            window.addEventListener('load', () => {
-                // Log performance metrics
-                setTimeout(() => {
-                    const timing = performance.timing;
-                    const loadTime = timing.loadEventEnd - timing.navigationStart;
-                    console.log(`Page loaded in ${loadTime}ms`);
-                }, 0);
+    <!-- JavaScript -->  
+<script>  
+    // DOM Ready  
+    document.addEventListener('DOMContentLoaded', function() {  
+        const loadingSpinner = document.getElementById('loadingSpinner');  
+        const mobileToggle = document.getElementById('mobileToggle');  
+        const navLinks = document.getElementById('navLinks');  
+        const header = document.getElementById('header');  
+          
+        // Hide loading spinner  
+        setTimeout(() => {  
+            loadingSpinner.style.display = 'none';  
+        }, 500);  
+          
+        // Lazy load images  
+        const lazyImages = document.querySelectorAll('img.lazy');  
+        const imageObserver = new IntersectionObserver((entries, observer) => {  
+            entries.forEach(entry => {  
+                if (entry.isIntersecting) {  
+                    const img = entry.target;  
+                    img.classList.add('loaded');  
+                    observer.unobserve(img);  
+                }  
+            });  
+        });  
+          
+        lazyImages.forEach(img => imageObserver.observe(img));  
+          
+        // Mobile navigation toggle  
+        mobileToggle.addEventListener('click', () => {  
+            navLinks.classList.toggle('active');  
+            mobileToggle.innerHTML = navLinks.classList.contains('active')   
+                ? '<i class="fas fa-times"></i>'   
+                : '<i class="fas fa-bars"></i>';  
+        });  
+          
+        // Close mobile menu on link click  
+        document.querySelectorAll('.nav-links a').forEach(link => {  
+            link.addEventListener('click', () => {  
+                navLinks.classList.remove('active');  
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';  
+            });  
+        });  
+          
+        // Header scroll effect  
+        window.addEventListener('scroll', () => {  
+            if (window.scrollY > 50) {  
+                header.classList.add('scrolled');  
+            } else {  
+                header.classList.remove('scrolled');  
+            }  
+        });  
+          
+        // Smooth scrolling for anchor links  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+            anchor.addEventListener('click', function(e) {  
+                e.preventDefault();  
+                  
+                const targetId = this.getAttribute('href');  
+                if (targetId === '#') return;  
+                  
+                const targetElement = document.querySelector(targetId);  
+                if (targetElement) {  
+                    window.scrollTo({  
+                        top: targetElement.offsetTop - 80,  
+                        behavior: 'smooth'  
+                    });  
+                }  
+            });  
+        });  
+          
+        // Animate skill bars on scroll  
+        const skillBars = document.querySelectorAll('.skill-progress');  
+        const observerOptions = {  
+            threshold: 0.5  
+        };  
+          
+        const skillObserver = new IntersectionObserver((entries) => {  
+            entries.forEach(entry => {  
+                if (entry.isIntersecting) {  
+                    const skillBar = entry.target;  
+                    const width = skillBar.style.width;  
+                    skillBar.style.width = '0%';  
+                      
+                    setTimeout(() => {  
+                        skillBar.style.width = width;  
+                    }, 300);  
+                      
+                    skillObserver.unobserve(skillBar);  
+                }  
+            });  
+        }, observerOptions);  
+          
+        skillBars.forEach(bar => skillObserver.observe(bar));  
+          
+        /*  
+        -----------------------------------------------------------
+        FIX FORM: Empêche Formspree de rediriger la page
+        -----------------------------------------------------------
+        */  
+        const contactForm = document.getElementById('contactForm');  
+        if (contactForm) {  
+            contactForm.addEventListener('submit', async function(e) {  
+                e.preventDefault(); // ❗ Empêche la redirection Formspree
+
+                const submitBtn = this.querySelector('button[type="submit"]');  
+                const originalText = submitBtn.innerHTML;  
+                  
+                // Loading state  
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';  
+                submitBtn.disabled = true;  
                 
-                // Check all images loaded successfully
-                const images = document.querySelectorAll('img');
-                images.forEach(img => {
-                    if (img.complete && img.naturalHeight === 0) {
-                        console.error('Image failed to load:', img.src);
-                    }
-                });
-            });
-            
-            // Language detection for translation readiness
-            const userLang = navigator.language || navigator.userLanguage;
-            console.log('User language detected:', userLang);
-            
-            // Add translation hint for browsers
-            const htmlElement = document.documentElement;
-            htmlElement.setAttribute('lang', 'en');
-            htmlElement.setAttribute('translate', 'yes');
-            htmlElement.setAttribute('data-translate', 'yes');
-            
-            // Browser compatibility check
-            const isIE = /*@cc_on!@*/false || !!document.documentMode;
-            if (isIE) {
-                console.warn('Internet Explorer detected - some features may not work optimally');
-            }
-        });
-        
-        // Handle browser back/forward cache
-        window.addEventListener('pageshow', function(event) {
-            if (event.persisted) {
-                window.location.reload();
-            }
-        });
-    </script>
+                // Prépare les données  
+                const formData = new FormData(this);
+
+                try {  
+                    const response = await fetch(this.action, {  
+                        method: "POST",  
+                        body: formData,  
+                        headers: { "Accept": "application/json" }  
+                    });  
+
+                    if (response.ok) {  
+                        alert("Thank you! Your message has been sent successfully.");  
+                        this.reset();  
+                    } else {  
+                        alert("An error occurred. Please try again.");  
+                    }  
+                } catch (error) {  
+                    alert("Network error. Please try again.");  
+                }  
+                
+                // Reset bouton  
+                submitBtn.innerHTML = originalText;  
+                submitBtn.disabled = false;  
+            });  
+        }  
+          
+        // Performance monitoring  
+        window.addEventListener('load', () => {  
+            setTimeout(() => {  
+                const timing = performance.timing;  
+                const loadTime = timing.loadEventEnd - timing.navigationStart;  
+                console.log(`Page loaded in ${loadTime}ms`);  
+            }, 0);  
+              
+            const images = document.querySelectorAll('img');  
+            images.forEach(img => {  
+                if (img.complete && img.naturalHeight === 0) {  
+                    console.error('Image failed to load:', img.src);  
+                }  
+            });  
+        });  
+          
+        const userLang = navigator.language || navigator.userLanguage;  
+        console.log('User language detected:', userLang);  
+          
+        const htmlElement = document.documentElement;  
+        htmlElement.setAttribute('lang', 'en');  
+        htmlElement.setAttribute('translate', 'yes');  
+        htmlElement.setAttribute('data-translate', 'yes');  
+          
+        const isIE = /*@cc_on!@*/false || !!document.documentMode;  
+        if (isIE) {  
+            console.warn('Internet Explorer detected - some features may not work optimally');  
+        }  
+    });  
+      
+    window.addEventListener('pageshow', function(event) {  
+        if (event.persisted) {  
+            window.location.reload();  
+        }  
+    });  
+</script>
 </body>
-</html>
+    </html>
